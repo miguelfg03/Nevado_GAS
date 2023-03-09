@@ -10,3 +10,9 @@ def nosotros(request):
 
 def municipio(request):
     return render(request, "inventario/index.html")
+
+def create_municipio(request):
+    return render(request, "inventario/create.html")
+
+def edit_municipio(request):
+    return render(request, "inventario/edit.html")

@@ -6,7 +6,7 @@
 
 <div class="card">
     <div class="card-header">
-        Listar Inventario
+        <a name="" id="" class="btn btn-success" href=" {% url 'create' %}" role="button">Agregar Municipio</a>
     </div>
     <div class="card-body">
         <h4 class="card-title">Inventario</h4>
@@ -28,7 +28,11 @@
                         <td>Rangel</td>
                         <td>500</td>
                         <td>1000lts</td>
-                        <td>Editar | Borrar </td>
+                        <td> 
+                            <a name="" id="" class="btn btn-info" href=" {% url 'edit' %}" role="button">Editar</a> 
+                            |
+                            <a name="" id="" class="btn btn-danger" href="#" role="button">Borrar</a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
