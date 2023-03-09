@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block titulo %} Inventario {% endblock %}
+
+{% block contenido %} 
+
+<div class="card">
+    <div class="card-header">
+        Listar Inventario
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Inventario</h4>
+
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Municipio</th>
+                        <th scope="col">Total Familias</th>
+                        <th scope="col">Total de litros</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Rangel</td>
+                        <td>500</td>
+                        <td>1000lts</td>
+                        <td>Editar | Borrar </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <p class="card-text">Text</p>
+    </div>
+    <div class="card-footer text-muted">
+        Nevado GAS S.A 2023
+    </div>
+</div>
+
+{% endblock  %}
