@@ -6,7 +6,7 @@ asi como su respectiva cantidad de litros de gas y numero de familias.
 from django.db import models
 
 class Municipio(models.Model):
-    nombre_mun = models.CharField(max_length=30)
+    nombre_mun = models.CharField(max_length=30, verbose_name= "Nombre Municipio")
     total_familias = models.IntegerField(default=0)
     total_litros = models.IntegerField(default=0)
 
@@ -15,7 +15,7 @@ class Municipio(models.Model):
 
 class Parroquia(models.Model):
     id_municipio = models.ForeignKey(Municipio, on_delete=models.CASCADE)
-    nombre_par = models.CharField(max_length=30)
+    nombre_par = models.CharField(max_length=30, verbose_name = "Nombre PArroquia")
     total_familias = models.IntegerField(default=0)
     total_litros = models.IntegerField(default=0)
 
@@ -24,7 +24,7 @@ class Parroquia(models.Model):
 
 class Sector(models.Model):
     id_parroquia = models.ForeignKey(Parroquia, on_delete=models.CASCADE)
-    nombre_sec = models.CharField(max_length=30)
+    nombre_sec = models.CharField(max_length=30, verbose_name = "Nombre Sector")
     total_familias = models.IntegerField(default=0)
     total_litros = models.IntegerField(default=0)
 
@@ -33,7 +33,7 @@ class Sector(models.Model):
 
 class Clap(models.Model):
     id_sector = models.ForeignKey(Sector, on_delete=models.CASCADE)
-    nombre_clap = models.CharField(max_length=30)
+    nombre_clap = models.CharField(max_length=30, verbose_name = "Nombre Clap")
     total_familias = models.IntegerField(default=0)
     total_litros = models.IntegerField(default=0)
 

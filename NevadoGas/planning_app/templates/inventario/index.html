@@ -23,17 +23,19 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {% for municipio in  municipios %}
                     <tr>
-                        <td>1</td>
-                        <td>Rangel</td>
-                        <td>500</td>
-                        <td>1000lts</td>
+                        <td> {{ municipio.id }}</td>
+                        <td> {{ municipio.nombre_mun }}</td>
+                        <td> {{ municipio.total_familias }}</td>
+                        <td> {{ municipio.total_litros }}</td>
                         <td> 
-                            <a name="" id="" class="btn btn-info" href=" {% url 'edit' %}" role="button">Editar</a> 
+                            <a name="" id="" class="btn btn-info" href=" {% url 'edit' municipio.id %}" role="button">Editar</a> 
                             |
-                            <a name="" id="" class="btn btn-danger" href="#" role="button">Borrar</a>
+                            <a name="" id="" class="btn btn-danger" href=" {% url 'delete' municipio.id %}" role="button">Borrar</a>
                         </td>
                     </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>
